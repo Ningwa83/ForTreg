@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset= "utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>parking hours</title>
+</head>
+ <style>
+
+.car{
+position: relative;
+height: 60px;
+width: 150px;
+font-size: 1rem;
+margin: 3rem 1rem;
+background-color: yellow;
+border-radius: 20px;
+border: 5px solid green;
+}
+ 
+ .car1{
+position: absolute;
+height: 60px;
+width: 160px;
+font-size: 1rem;
+margin: 10rem -10rem;
+color: black;
+background-color: pink;
+border-radius: 20px;
+border: 5px solid red;
+
+}
+
+.van{
+position: absolute;
+height: 60px;
+width: 180px;
+font-size: 1rem;
+margin: 3rem 4rem;
+background-color: yellow;
+border-radius: 20px;
+border: 5px solid green;
+
+}
+.van1{
+position: absolute;
+height: 60px;
+width: 170px;
+font-size: 1rem;
+margin: 10rem 4rem;
+color: black;
+background-color: pink;
+border-radius: 20px;
+border: 5px solid red;
+
+}
+
+.agent{
+position: absolute;
+height: 60px;
+width: 140px;
+font-size: 1rem;
+margin: 18rem -1rem;
+color: black;
+background-color: pink;
+border-radius: 30px;
+border: 5px solid purple;
+
+
+}
+.residentCarBattery{
+
+position: absolute;
+height: 60px;
+width: 180px;
+font-size: 1 rem;
+margin: 25rem -11rem;
+color: black;
+background-color: white;
+border-radius: 20px;
+border: 5px solid yellow;
+
+}
+
+.visitorCarBattery{
+
+position: absolute;
+height: 60px;
+width: 180px;
+font-size: 1 rem;
+margin: 25rem 1rem;
+color: black;
+background-color: white;
+border-radius: 20px;
+border: 5px solid yellow;
+
+}
+
+
+
+
+</style>
+<body>
+ <p style = "font-size: 30px">Vehicle Parking Fee Calculator</p>
+ 
+<!-- private car first in -->
+
+<button class = "car" onclick = "
+
+ const entryHr = Number(prompt('IN HOUR in 24 hr format'));
+ const entryMin = Number(prompt('IN MINUTE'));
+
+ let exitHr = Number(prompt('OUT HOUR in 24 hr format'));
+const exitMin = Number(prompt('OUT MINUTE'));
+
+if(exitHr < entryHr){
+if(exitHr === 0){exitHr = 24}
+if(exitHr === 1){exitHr = 25}
+if(exitHr === 2){exitHr = 26}
+if(exitHr === 3){exitHr = 27}
+if(exitHr === 4){exitHr = 28}
+if(exitHr === 5){exitHr = 29}
+if(exitHr === 6){exitHr = 30}
+if(exitHr === 7){exitHr = 31}
+if(exitHr === 8){exitHr = 32}
+if(exitHr === 9){exitHr = 33}
+if(exitHr === 10){exitHr = 34}
+if(exitHr === 11){exitHr = 35}
+if(exitHr === 12){exitHr = 36}
+if(exitHr === 13){exitHr = 37}
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr - 0.5;
+
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$20');}
+else if(fee > 1 && fee <= 2){alert('$40');}
+else if(fee > 2 && fee <= 3){alert('$60');}
+else if(fee > 3 && fee <= 4){alert('$80');}
+else if(fee > 4 && fee <= 5){alert('$100');}
+else if(fee > 5 && fee <= 6){alert('$120');}
+else if(fee > 6 && fee <= 7){alert('$140');}
+else if(fee > 7 && fee <= 8){alert('$160');}
+else if(fee > 8 && fee <= 9){alert('$180');}
+else if(fee > 9 && fee <= 10){alert('$200');}
+else if(fee > 10 && fee <= 11){alert('$220');}
+else if(fee > 11 && fee <= 12){alert('$240');}
+else if(fee > 12 && fee <= 13){alert('$260');}
+else if(fee > 13 && fee <= 14){alert('$280');}
+else if(fee > 14 && fee <= 15){alert('$300');}
+else if(fee > 15 && fee <= 16){alert('$320');}
+else if(fee > 16 && fee <= 17){alert('$340');}
+else if(fee > 17 && fee <= 18){alert('$360');}
+else if(fee > 18 && fee <= 19){alert('$380');}
+else if(fee > 19 && fee <= 20){alert('$400');}
+else if(fee > 20 && fee <= 21){alert('$420');}
+else if(fee > 21 && fee <= 22){alert('$440');}
+else if(fee > 22 && fee <= 23){alert('$460');}
+else if(fee > 23 && fee <= 24){alert('$480');}
+else if(fee > 24 && fee <= 25){alert('$500');}
+else if(fee > 25 && fee <= 26){alert('$520');}
+
+}
+
+
+else if(exitHr >= entryHr){
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr - 0.5;
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$20');}
+else if(fee > 1 && fee <= 2){alert('$40');}
+else if(fee > 2 && fee <= 3){alert('$60');}
+else if(fee > 3 && fee <= 4){alert('$80');}
+else if(fee > 4 && fee <= 5){alert('$100');}
+else if(fee > 5 && fee <= 6){alert('$120');}
+else if(fee > 6 && fee <= 7){alert('$140');}
+else if(fee > 7 && fee <= 8){alert('$160');}
+else if(fee > 8 && fee <= 9){alert('$180');}
+else if(fee > 9 && fee <= 10){alert('$200');}
+else if(fee > 10 && fee <= 11){alert('$220');}
+else if(fee > 11 && fee <= 12){alert('$240');}
+else if(fee > 12 && fee <= 13){alert('$260');}
+else if(fee > 13 && fee <= 14){alert('$280');}
+else if(fee > 14 && fee <= 15){alert('$300');}
+else if(fee > 15 && fee <= 16){alert('$320');}
+else if(fee > 16 && fee <= 17){alert('$340');}
+else if(fee > 17 && fee <= 18){alert('$360');}
+else if(fee > 18 && fee <= 19){alert('$380');}
+else if(fee > 19 && fee <= 20){alert('$400');}
+else if(fee > 20 && fee <= 21){alert('$420');}
+else if(fee > 21 && fee <= 22){alert('$440');}
+else if(fee > 22 && fee <= 23){alert('$460');}
+else if(fee > 23 && fee <= 24){alert('$480');}
+else if(fee > 24 && fee <= 25){alert('$500');}
+else if(fee > 25 && fee <= 26){alert('$520');}
+
+}
+  
+else{alert('enter again');}
+
+">PRIVATE CAR First In</button>
+
+<!-- private car second/third time in -->
+
+ <button class = "car1" onclick = "
+
+ const entryHr = Number(prompt('IN HOUR in 24 hr format'));
+ const entryMin = Number(prompt('IN MINUTE'));
+
+ let exitHr = Number(prompt('OUT HOUR in 24 hr format'));
+const exitMin = Number(prompt('OUT MINUTE'));
+
+if(exitHr < entryHr){
+if(exitHr === 0){exitHr = 24}
+if(exitHr === 1){exitHr = 25}
+if(exitHr === 2){exitHr = 26}
+if(exitHr === 3){exitHr = 27}
+if(exitHr === 4){exitHr = 28}
+if(exitHr === 5){exitHr = 29}
+if(exitHr === 6){exitHr = 30}
+if(exitHr === 7){exitHr = 31}
+if(exitHr === 8){exitHr = 32}
+if(exitHr === 9){exitHr = 33}
+if(exitHr === 10){exitHr = 34}
+if(exitHr === 11){exitHr = 35}
+if(exitHr === 12){exitHr = 36}
+if(exitHr === 13){exitHr = 37}
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr;
+
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$20');}
+else if(fee > 1 && fee <= 2){alert('$40');}
+else if(fee > 2 && fee <= 3){alert('$60');}
+else if(fee > 3 && fee <= 4){alert('$80');}
+else if(fee > 4 && fee <= 5){alert('$100');}
+else if(fee > 5 && fee <= 6){alert('$120');}
+else if(fee > 6 && fee <= 7){alert('$140');}
+else if(fee > 7 && fee <= 8){alert('$160');}
+else if(fee > 8 && fee <= 9){alert('$180');}
+else if(fee > 9 && fee <= 10){alert('$200');}
+else if(fee > 10 && fee <= 11){alert('$220');}
+else if(fee > 11 && fee <= 12){alert('$240');}
+else if(fee > 12 && fee <= 13){alert('$260');}
+else if(fee > 13 && fee <= 14){alert('$280');}
+else if(fee > 14 && fee <= 15){alert('$300');}
+else if(fee > 15 && fee <= 16){alert('$320');}
+else if(fee > 16 && fee <= 17){alert('$340');}
+else if(fee > 17 && fee <= 18){alert('$360');}
+else if(fee > 18 && fee <= 19){alert('$380');}
+else if(fee > 19 && fee <= 20){alert('$400');}
+else if(fee > 20 && fee <= 21){alert('$420');}
+else if(fee > 21 && fee <= 22){alert('$440');}
+else if(fee > 22 && fee <= 23){alert('$460');}
+else if(fee > 23 && fee <= 24){alert('$480');}
+else if(fee > 24 && fee <= 25){alert('$500');}
+else if(fee > 25 && fee <= 26){alert('$520');}
+
+}
+
+
+else if(exitHr >= entryHr){
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr;
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$20');}
+else if(fee > 1 && fee <= 2){alert('$40');}
+else if(fee > 2 && fee <= 3){alert('$60');}
+else if(fee > 3 && fee <= 4){alert('$80');}
+else if(fee > 4 && fee <= 5){alert('$100');}
+else if(fee > 5 && fee <= 6){alert('$120');}
+else if(fee > 6 && fee <= 7){alert('$140');}
+else if(fee > 7 && fee <= 8){alert('$160');}
+else if(fee > 8 && fee <= 9){alert('$180');}
+else if(fee > 9 && fee <= 10){alert('$200');}
+else if(fee > 10 && fee <= 11){alert('$220');}
+else if(fee > 11 && fee <= 12){alert('$240');}
+else if(fee > 12 && fee <= 13){alert('$260');}
+else if(fee > 13 && fee <= 14){alert('$280');}
+else if(fee > 14 && fee <= 15){alert('$300');}
+else if(fee > 15 && fee <= 16){alert('$320');}
+else if(fee > 16 && fee <= 17){alert('$340');}
+else if(fee > 17 && fee <= 18){alert('$360');}
+else if(fee > 18 && fee <= 19){alert('$380');}
+else if(fee > 19 && fee <= 20){alert('$400');}
+else if(fee > 20 && fee <= 21){alert('$420');}
+else if(fee > 21 && fee <= 22){alert('$440');}
+else if(fee > 22 && fee <= 23){alert('$460');}
+else if(fee > 23 && fee <= 24){alert('$480');}
+else if(fee > 24 && fee <= 25){alert('$500');}
+else if(fee > 25 && fee <= 26){alert('$520');}
+
+}
+
+else{alert('enter again');}
+
+
+">PRIVATE CAR Second/Third In</button>
+
+<!-- van/lorry first time in -->
+
+ <button class = "van" onclick = "
+
+const entryHr = Number(prompt('IN HOUR in 24 hr format'));
+ const entryMin = Number(prompt('IN MINUTE'));
+
+ let exitHr = Number(prompt('OUT HOUR in 24 hr format'));
+const exitMin = Number(prompt('OUT MINUTE'));
+
+if(exitHr < entryHr){
+if(exitHr === 0){exitHr = 24}
+if(exitHr === 1){exitHr = 25}
+if(exitHr === 2){exitHr = 26}
+if(exitHr === 3){exitHr = 27}
+if(exitHr === 4){exitHr = 28}
+if(exitHr === 5){exitHr = 29}
+if(exitHr === 6){exitHr = 30}
+if(exitHr === 7){exitHr = 31}
+if(exitHr === 8){exitHr = 32}
+if(exitHr === 9){exitHr = 33}
+if(exitHr === 10){exitHr = 34}
+if(exitHr === 11){exitHr = 35}
+if(exitHr === 12){exitHr = 36}
+if(exitHr === 13){exitHr = 37}
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr - 0.34;
+
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$30');}
+else if(fee > 1 && fee <= 2){alert('$60');}
+else if(fee > 2 && fee <= 3){alert('$90');}
+else if(fee > 3 && fee <= 4){alert('$120');}
+else if(fee > 4 && fee <= 5){alert('$150');}
+else if(fee > 5 && fee <= 6){alert('$180');}
+else if(fee > 6 && fee <= 7){alert('$210');}
+else if(fee > 7 && fee <= 8){alert('$240');}
+else if(fee > 8 && fee <= 9){alert('$270');}
+else if(fee > 9 && fee <= 10){alert('$300');}
+else if(fee > 10 && fee <= 11){alert('$330');}
+else if(fee > 11 && fee <= 12){alert('$360');}
+else if(fee > 12 && fee <= 13){alert('$390');}
+else if(fee > 13 && fee <= 14){alert('$410');}
+else if(fee > 14 && fee <= 15){alert('$450');}
+else if(fee > 15 && fee <= 16){alert('$480');}
+else if(fee > 16 && fee <= 17){alert('$510');}
+else if(fee > 17 && fee <= 18){alert('$540');}
+else if(fee > 18 && fee <= 19){alert('$570');}
+else if(fee > 19 && fee <= 20){alert('$600');}
+else if(fee > 20 && fee <= 21){alert('$630');}
+else if(fee > 21 && fee <= 22){alert('$660');}
+else if(fee > 22 && fee <= 23){alert('$690');}
+else if(fee > 23 && fee <= 24){alert('$710');}
+else if(fee > 24 && fee <= 25){alert('$740');}
+else if(fee > 25 && fee <= 26){alert('$770');}
+
+}
+else if(exitHr >= entryHr){
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr - 0.34;
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$30');}
+else if(fee > 1 && fee <= 2){alert('$60');}
+else if(fee > 2 && fee <= 3){alert('$90');}
+else if(fee > 3 && fee <= 4){alert('$120');}
+else if(fee > 4 && fee <= 5){alert('$150');}
+else if(fee > 5 && fee <= 6){alert('$180');}
+else if(fee > 6 && fee <= 7){alert('$210');}
+else if(fee > 7 && fee <= 8){alert('$240');}
+else if(fee > 8 && fee <= 9){alert('$270');}
+else if(fee > 9 && fee <= 10){alert('$300');}
+else if(fee > 10 && fee <= 11){alert('$330');}
+else if(fee > 11 && fee <= 12){alert('$360');}
+else if(fee > 12 && fee <= 13){alert('$390');}
+else if(fee > 13 && fee <= 14){alert('$410');}
+else if(fee > 14 && fee <= 15){alert('$450');}
+else if(fee > 15 && fee <= 16){alert('$480');}
+else if(fee > 16 && fee <= 17){alert('$510');}
+else if(fee > 17 && fee <= 18){alert('$540');}
+else if(fee > 18 && fee <= 19){alert('$570');}
+else if(fee > 19 && fee <= 20){alert('$600');}
+else if(fee > 20 && fee <= 21){alert('$630');}
+else if(fee > 21 && fee <= 22){alert('$660');}
+else if(fee > 22 && fee <= 23){alert('$690');}
+else if(fee > 23 && fee <= 24){alert('$710');}
+else if(fee > 24 && fee <= 25){alert('$740');}
+else if(fee > 25 && fee <= 26){alert('$770');}
+
+}
+
+else{alert('enter again');}
+
+
+">VAN AND TRUCK First In</>
+
+<!-- van/lorry seond/third time in -->
+
+ <button class = "van1" onclick = "
+
+ const entryHr = Number(prompt('IN HOUR in 24 hr format'));
+ const entryMin = Number(prompt('IN MINUTE'));
+
+ let exitHr = Number(prompt('OUT HOUR in 24 hr format'));
+const exitMin = Number(prompt('OUT MINUTE'));
+
+if(exitHr < entryHr){
+if(exitHr === 0){exitHr = 24}
+if(exitHr === 1){exitHr = 25}
+if(exitHr === 2){exitHr = 26}
+if(exitHr === 3){exitHr = 27}
+if(exitHr === 4){exitHr = 28}
+if(exitHr === 5){exitHr = 29}
+if(exitHr === 6){exitHr = 30}
+if(exitHr === 7){exitHr = 31}
+if(exitHr === 8){exitHr = 32}
+if(exitHr === 9){exitHr = 33}
+if(exitHr === 10){exitHr = 34}
+if(exitHr === 11){exitHr = 35}
+if(exitHr === 12){exitHr = 36}
+if(exitHr === 13){exitHr = 37}
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr;
+
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$30');}
+else if(fee > 1 && fee <= 2){alert('$60');}
+else if(fee > 2 && fee <= 3){alert('$90');}
+else if(fee > 3 && fee <= 4){alert('$120');}
+else if(fee > 4 && fee <= 5){alert('$150');}
+else if(fee > 5 && fee <= 6){alert('$180');}
+else if(fee > 6 && fee <= 7){alert('$210');}
+else if(fee > 7 && fee <= 8){alert('$240');}
+else if(fee > 8 && fee <= 9){alert('$270');}
+else if(fee > 9 && fee <= 10){alert('$300');}
+else if(fee > 10 && fee <= 11){alert('$330');}
+else if(fee > 11 && fee <= 12){alert('$360');}
+else if(fee > 12 && fee <= 13){alert('$390');}
+else if(fee > 13 && fee <= 14){alert('$410');}
+else if(fee > 14 && fee <= 15){alert('$450');}
+else if(fee > 15 && fee <= 16){alert('$480');}
+else if(fee > 16 && fee <= 17){alert('$510');}
+else if(fee > 17 && fee <= 18){alert('$540');}
+else if(fee > 18 && fee <= 19){alert('$570');}
+else if(fee > 19 && fee <= 20){alert('$600');}
+else if(fee > 20 && fee <= 21){alert('$630');}
+else if(fee > 21 && fee <= 22){alert('$660');}
+else if(fee > 22 && fee <= 23){alert('$690');}
+else if(fee > 23 && fee <= 24){alert('$710');}
+else if(fee > 24 && fee <= 25){alert('$740');}
+else if(fee > 25 && fee <= 26){alert('$770');}
+
+}
+else if(exitHr >= entryHr){
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr;
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$30');}
+else if(fee > 1 && fee <= 2){alert('$60');}
+else if(fee > 2 && fee <= 3){alert('$90');}
+else if(fee > 3 && fee <= 4){alert('$120');}
+else if(fee > 4 && fee <= 5){alert('$150');}
+else if(fee > 5 && fee <= 6){alert('$180');}
+else if(fee > 6 && fee <= 7){alert('$210');}
+else if(fee > 7 && fee <= 8){alert('$240');}
+else if(fee > 8 && fee <= 9){alert('$270');}
+else if(fee > 9 && fee <= 10){alert('$300');}
+else if(fee > 10 && fee <= 11){alert('$330');}
+else if(fee > 11 && fee <= 12){alert('$360');}
+else if(fee > 12 && fee <= 13){alert('$390');}
+else if(fee > 13 && fee <= 14){alert('$410');}
+else if(fee > 14 && fee <= 15){alert('$450');}
+else if(fee > 15 && fee <= 16){alert('$480');}
+else if(fee > 16 && fee <= 17){alert('$510');}
+else if(fee > 17 && fee <= 18){alert('$540');}
+else if(fee > 18 && fee <= 19){alert('$570');}
+else if(fee > 19 && fee <= 20){alert('$600');}
+else if(fee > 20 && fee <= 21){alert('$630');}
+else if(fee > 21 && fee <= 22){alert('$660');}
+else if(fee > 22 && fee <= 23){alert('$690');}
+else if(fee > 23 && fee <= 24){alert('$710');}
+else if(fee > 24 && fee <= 25){alert('$740');}
+else if(fee > 25 && fee <= 26){alert('$770');}
+
+}
+else{alert('enter again');}
+
+
+">VAN AND TRUCK Second/third In</button>
+
+<!-- agent car -->
+
+ <button class = "agent" onclick = "
+const entryHr = Number(prompt('IN HOUR in 24 hr format'));
+ const entryMin = Number(prompt('IN MINUTE'));
+
+ const exitHr = Number(prompt('OUT HOUR in 24 hr format'));
+const exitMin = Number(prompt('OUT MINUTE'));
+
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr;
+
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$20');}
+else if(fee > 1 && fee <= 2){alert('$40');}
+else if(fee > 2 && fee <= 3){alert('$60');}
+else if(fee > 3 && fee <= 4){alert('$80');}
+else if(fee > 4 && fee <= 5){alert('$100');}
+else if(fee > 5 && fee <= 6){alert('$120');}
+else if(fee > 6 && fee <= 7){alert('$140');}
+else if(fee > 7 && fee <= 8){alert('$160');}
+else if(fee > 8 && fee <= 9){alert('$180');}
+else if(fee > 9 && fee <= 10){alert('$200');}
+else if(fee > 10 && fee <= 11){alert('$220');}
+else if(fee > 11 && fee <= 12){alert('$240');}
+else if(fee > 12 && fee <= 13){alert('$260');}
+else if(fee > 13 && fee <= 14){alert('$280');}
+else if(fee > 14 && fee <= 15){alert('$300');}
+else if(fee > 15 && fee <= 16){alert('$320');}
+else if(fee > 16 && fee <= 17){alert('$340');}
+else if(fee > 17 && fee <= 18){alert('$360');}
+else if(fee > 18 && fee <= 19){alert('$380');}
+else if(fee > 19 && fee <= 20){alert('$400');}
+else if(fee > 20 && fee <= 21){alert('$420');}
+else if(fee > 21 && fee <= 22){alert('$440');}
+else if(fee > 22 && fee <= 23){alert('$460');}
+else if(fee > 23 && fee <= 24){alert('$480');}
+else if(fee > 24 && fee <= 25){alert('$500');}
+else if(fee > 25 && fee <= 26){alert('$520');}
+
+else{alert('enter again');}
+
+" >AGENT CAR</button>
+  
+
+<!--resident car battery charge-->
+
+ <button class = "residentCarBattery" onclick = "
+
+const entryHr = Number(prompt('IN HOUR in 24 hr format'));
+ const entryMin = Number(prompt('IN MINUTE'));
+
+ let exitHr = Number(prompt('OUT HOUR in 24 hr format'));
+const exitMin = Number(prompt('OUT MINUTE'));
+  
+if(exitHr < entryHr){
+if(exitHr === 0){exitHr = 24}
+if(exitHr === 1){exitHr = 25}
+if(exitHr === 2){exitHr = 26}
+if(exitHr === 3){exitHr = 27}
+if(exitHr === 4){exitHr = 28}
+if(exitHr === 5){exitHr = 29}
+if(exitHr === 6){exitHr = 30}
+if(exitHr === 7){exitHr = 31}
+if(exitHr === 8){exitHr = 32}
+if(exitHr === 9){exitHr = 33}
+if(exitHr === 10){exitHr = 34}
+if(exitHr === 11){exitHr = 35}
+if(exitHr === 12){exitHr = 36}
+if(exitHr === 13){exitHr = 37}
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr;
+
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$10');}
+else if(fee > 1 && fee <= 2){alert('$20');}
+else if(fee > 2 && fee <= 3){alert('$30');}
+else if(fee > 3 && fee <= 4){alert('$40');}
+else if(fee > 4 && fee <= 5){alert('$50');}
+else if(fee > 5 && fee <= 6){alert('$60');}
+else if(fee > 6 && fee <= 7){alert('$70');}
+else if(fee > 7 && fee <= 8){alert('$80');}
+else if(fee > 8 && fee <= 9){alert('$90');}
+else if(fee > 9 && fee <= 10){alert('$100');}
+else if(fee > 10 && fee <= 11){alert('$110');}
+else if(fee > 11 && fee <= 12){alert('$120');}
+else if(fee > 12 && fee <= 13){alert('$130');}
+else if(fee > 13 && fee <= 14){alert('$140');}
+else if(fee > 14 && fee <= 15){alert('$150');}
+else if(fee > 15 && fee <= 16){alert('$160');}
+else if(fee > 16 && fee <= 17){alert('$170');}
+else if(fee > 17 && fee <= 18){alert('$180');}
+else if(fee > 18 && fee <= 19){alert('$190');}
+else if(fee > 19 && fee <= 20){alert('$200');}
+else if(fee > 20 && fee <= 21){alert('$210');}
+else if(fee > 21 && fee <= 22){alert('$220');}
+else if(fee > 22 && fee <= 23){alert('$230');}
+else if(fee > 23 && fee <= 24){alert('$240');}
+else if(fee > 24 && fee <= 25){alert('$250');}
+else if(fee > 25 && fee <= 26){alert('$260');}
+
+}
+
+
+else if(exitHr >= entryHr){
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr;
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$10');}
+else if(fee > 1 && fee <= 2){alert('$20');}
+else if(fee > 2 && fee <= 3){alert('$30');}
+else if(fee > 3 && fee <= 4){alert('$40');}
+else if(fee > 4 && fee <= 5){alert('$50');}
+else if(fee > 5 && fee <= 6){alert('$60');}
+else if(fee > 6 && fee <= 7){alert('$70');}
+else if(fee > 7 && fee <= 8){alert('$80');}
+else if(fee > 8 && fee <= 9){alert('$90');}
+else if(fee > 9 && fee <= 10){alert('$100');}
+else if(fee > 10 && fee <= 11){alert('$110');}
+else if(fee > 11 && fee <= 12){alert('$120');}
+else if(fee > 12 && fee <= 13){alert('$130');}
+else if(fee > 13 && fee <= 14){alert('$140');}
+else if(fee > 14 && fee <= 15){alert('$150');}
+else if(fee > 15 && fee <= 16){alert('$160');}
+else if(fee > 16 && fee <= 17){alert('$170');}
+else if(fee > 17 && fee <= 18){alert('$180');}
+else if(fee > 18 && fee <= 19){alert('$190');}
+else if(fee > 19 && fee <= 20){alert('$200');}
+else if(fee > 20 && fee <= 21){alert('$210');}
+else if(fee > 21 && fee <= 22){alert('$220');}
+else if(fee > 22 && fee <= 23){alert('$230');}
+else if(fee > 23 && fee <= 24){alert('$240');}
+else if(fee > 24 && fee <= 25){alert('$250');}
+else if(fee > 25 && fee <= 26){alert('$260');}
+
+}
+
+else{alert('enter again');}
+
+" >RESIDENT CAR BATTERY CHARGING FEE</button>
+
+
+<!--visitor car charging-->
+
+<button class = "visitorCarBattery" onclick = "
+
+ const entryHr = Number(prompt('IN HOUR in 24 hr format'));
+ const entryMin = Number(prompt('IN MINUTE'));
+
+ let exitHr = Number(prompt('OUT HOUR in 24 hr format'));
+const exitMin = Number(prompt('OUT MINUTE'));
+  
+if(exitHr < entryHr){
+if(exitHr === 0){exitHr = 24}
+if(exitHr === 1){exitHr = 25}
+if(exitHr === 2){exitHr = 26}
+if(exitHr === 3){exitHr = 27}
+if(exitHr === 4){exitHr = 28}
+if(exitHr === 5){exitHr = 29}
+if(exitHr === 6){exitHr = 30}
+if(exitHr === 7){exitHr = 31}
+if(exitHr === 8){exitHr = 32}
+if(exitHr === 9){exitHr = 33}
+if(exitHr === 10){exitHr = 34}
+if(exitHr === 11){exitHr = 35}
+if(exitHr === 12){exitHr = 36}
+if(exitHr === 13){exitHr = 37}
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr;
+
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$30');}
+else if(fee > 1 && fee <= 2){alert('$60');}
+else if(fee > 2 && fee <= 3){alert('$90');}
+else if(fee > 3 && fee <= 4){alert('$120');}
+else if(fee > 4 && fee <= 5){alert('$150');}
+else if(fee > 5 && fee <= 6){alert('$180');}
+else if(fee > 6 && fee <= 7){alert('$210');}
+else if(fee > 7 && fee <= 8){alert('$240');}
+else if(fee > 8 && fee <= 9){alert('$270');}
+else if(fee > 9 && fee <= 10){alert('$300');}
+else if(fee > 10 && fee <= 11){alert('$330');}
+else if(fee > 11 && fee <= 12){alert('$360');}
+else if(fee > 12 && fee <= 13){alert('$390');}
+else if(fee > 13 && fee <= 14){alert('$410');}
+else if(fee > 14 && fee <= 15){alert('$450');}
+else if(fee > 15 && fee <= 16){alert('$480');}
+else if(fee > 16 && fee <= 17){alert('$510');}
+else if(fee > 17 && fee <= 18){alert('$540');}
+else if(fee > 18 && fee <= 19){alert('$570');}
+else if(fee > 19 && fee <= 20){alert('$600');}
+else if(fee > 20 && fee <= 21){alert('$630');}
+else if(fee > 21 && fee <= 22){alert('$660');}
+else if(fee > 22 && fee <= 23){alert('$690');}
+else if(fee > 23 && fee <= 24){alert('$710');}
+else if(fee > 24 && fee <= 25){alert('$740');}
+else if(fee > 25 && fee <= 26){alert('$770');}
+
+}
+
+
+else if(exitHr >= entryHr){
+const totalEntryHr = entryHr + entryMin / 60;
+
+const totalExitHr = exitHr + exitMin / 60;
+
+const fee = totalExitHr - totalEntryHr;
+
+if(fee <= 0){alert('NIL');}
+else if(fee > 0 && fee <= 1){alert('$30');}
+else if(fee > 1 && fee <= 2){alert('$60');}
+else if(fee > 2 && fee <= 3){alert('$90');}
+else if(fee > 3 && fee <= 4){alert('$120');}
+else if(fee > 4 && fee <= 5){alert('$150');}
+else if(fee > 5 && fee <= 6){alert('$180');}
+else if(fee > 6 && fee <= 7){alert('$210');}
+else if(fee > 7 && fee <= 8){alert('$240');}
+else if(fee > 8 && fee <= 9){alert('$270');}
+else if(fee > 9 && fee <= 10){alert('$300');}
+else if(fee > 10 && fee <= 11){alert('$330');}
+else if(fee > 11 && fee <= 12){alert('$360');}
+else if(fee > 12 && fee <= 13){alert('$390');}
+else if(fee > 13 && fee <= 14){alert('$410');}
+else if(fee > 14 && fee <= 15){alert('$450');}
+else if(fee > 15 && fee <= 16){alert('$480');}
+else if(fee > 16 && fee <= 17){alert('$510');}
+else if(fee > 17 && fee <= 18){alert('$540');}
+else if(fee > 18 && fee <= 19){alert('$570');}
+else if(fee > 19 && fee <= 20){alert('$600');}
+else if(fee > 20 && fee <= 21){alert('$630');}
+else if(fee > 21 && fee <= 22){alert('$660');}
+else if(fee > 22 && fee <= 23){alert('$690');}
+else if(fee > 23 && fee <= 24){alert('$710');}
+else if(fee > 24 && fee <= 25){alert('$740');}
+else if(fee > 25 && fee <= 26){alert('$770');}
+
+}
+
+else{alert('enter again');}
+
+">Visitor Car Battery Charging</button>
+
+
+
+
+
+
+
+
+
+
+ <script>
+
+
+</script>
+
+ <p style = "position: absolute; margin: 20rem 8rem">Designed By:</p>
+ <p style = "position: absolute; margin: 22rem 12rem">Ningwa</p>
+</body>
+</html>
